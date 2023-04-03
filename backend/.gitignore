@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# environment variables
+/.env
+/.env.*
+
+# runtime data
+/data
+
+# logs
+/log
+
+# IDE files
+*.idea
+*.iml
+.vscode
