@@ -1,9 +1,9 @@
 # dependencies
-/node_modules
+/backend/node_modules
 
 # environment variables
-/.env
-/.env.*
+/backend/.env
+/backend/.env.*
 
 # runtime data
 /data

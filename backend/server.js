@@ -1,23 +1,25 @@
 const express = require('express');
+const router = require('./routes/workouts')
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const dotenv = require('dotenv')
 dotenv.config()
-const workoutRoutes = require('./routes/workouts')
 const app = express();
-const port = 3000;
+const { getAllWorkouts, getSingleWorkout, createWorkout, deleteWorkout, updateWorkout } = require('./controllers/workoutController');
+app.use(express.json());
+app.use('/api', router);
+// @route   GET api/workouts
+router.get('/', getAllWorkouts);
 
-app.use(express.json())
-app.use('/api/', workoutRoutes)
+// @route   GET api/workouts/:id
+router.get('/:id', getSingleWorkout);
 
-// connect to db 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-    console.log('Connected to database')
-    app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-}).catch((err) => {
-    console.log('Connection failed')
-    console.log(err)
-})
+// @route   POST api/workouts
+router.post('/', createWorkout);
 
-app.get('/', (req, res) => res.send('Hello World!'));
+// @route   DELETE api/workouts/:id
+router.delete('/:id', deleteWorkout);
 
+//UPDATE a workout
+router.patch('/:id', updateWorkout);
 
+mongoose.connect(process.env.CONNECTION_URL).then(() => app.listen(3000, () => console.log('Server running on port 5000'))).catch((error) => console.log(error.message));
