@@ -29,23 +29,23 @@ const WorkoutForm = () => {
 
     return (
         <form onSubmit={handleSubmit} >
-            <h2 className='text-center font-black text-2xl text-orange-400 bg-white p-3 my-2 rounded-xl shadow-md '>Add a new workout</h2>
+            <h2 className='text-center font-black text-2xl text-blue-400 bg-white p-3 my-2 rounded-xl shadow-md '>Add a new workout</h2>
 
-            <label htmlFor="title" className='font-black text-orange-500'>Title:</label>
+            <label htmlFor="title" className='font-black text-gray-100'>Title:</label>
             <input type="text"
                 className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-lg my-2"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
                 placeholder='title'
             />
-            <label htmlFor="load" className='font-black text-orange-500'>Load:</label>
+            <label htmlFor="load" className='font-black text-gray-100'>Load:</label>
             <input type="number"
                 className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-lg my-2"
                 onChange={(e) => setLoad(e.target.value)}
                 value={load}
                 placeholder='load'
             />
-            <label htmlFor="reps" className='font-black text-orange-500'>Reps:</label>
+            <label htmlFor="reps" className='font-black text-gray-100'>Reps:</label>
             <input type="number"
                 className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-lg my-2"
                 onChange={(e) => setReps(e.target.value)}
@@ -53,7 +53,7 @@ const WorkoutForm = () => {
                 placeholder='reps'
             />
             <div class="w-full flex justify-center">
-                <button type="submit" className="rounded-lg bg-orange-500 px-5 py-3 text-sm font-medium text-white mb-3 shadow-xl hover:bg-orange-400">Add workout</button>
+                <button type="submit" className="rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white mb-3 shadow-xl hover:bg-blue-400 font-['Inter Tight'] font-black tracking-wide">Add workout</button>
             </div>
         </form>
     )

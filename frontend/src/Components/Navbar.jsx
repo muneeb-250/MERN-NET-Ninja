@@ -5,9 +5,9 @@ const Navbar = () => {
         <header>
             <nav>
                 <ul>
-                    <li><Link to="/">Workout King 👑</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/" className='text-white drop-shadow-sm bg-cyan-400 p-2 rounded-xl'>Workout King 👑</Link></li>
+                    <li><Link to="/about" className='drop-shadow'>About</Link></li>
+                    <li><Link to="/contact" className='drop-shadow'>Contact</Link></li>
                 </ul>
             </nav>
 

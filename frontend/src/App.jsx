@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 function App() {
 
   return (
-    <div className="app">
+    <div className="app bg-gradient-to-r from-cyan-500 to-blue-500">
       <Router>
         <Navbar />
         <div className="pages">
