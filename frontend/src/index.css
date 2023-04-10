@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter Tight', system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -11,7 +13,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: azure;
+  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
 }
 
 
@@ -35,7 +37,6 @@ header {
   align-items: center;
   justify-content: flex-start;
   padding: 2rem;
-  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
 }
 
 
